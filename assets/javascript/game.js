@@ -13,21 +13,21 @@ var questions = {
   },
   
   {
-    q: Humans have a maximum of five senses"
-  choice: ["True", "False"]
-  answer: false
+    q: Humans have a maximum of five senses.
+    choice: ["True", "False"]
+    answer: false
   
   },
-  
+
   {
     q: Los Angeles is the most populous city in the United States.
     choice: ["True", "False"]
-    answer: true
-  }
+    answer: false
+  
+  },
     
-  }
 
-  setTimeout(fiveSeconds, 1000 * 5000);
+  setTimeout(fiveSeconds, 1000 * 50000);
   setTimeout(timeUp, 1000 * 10000);
   console.log("done");
   $("#time-left").append("<h2>Time's Up!</h2>");
@@ -65,12 +65,11 @@ var questions = {
     if (userInput === "t" || userInput === "f") {
 
       if (userInput === questions[questionIndex].a) {
-        alert("Correct!");
         score++;
         updateScore();
       }
       else {
-        alert("Wrong!");
+        updateScore();
       }
       questionIndex++;
       renderQuestion();
